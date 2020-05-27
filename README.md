@@ -14,7 +14,8 @@ $ ./racketcs-7.7/bin/raco pkg install -i --auto cext-lib
 
  ```
 
-OK minimal install is missing the library file to link with.  Building from source.
+OK minimal install is missing the library file to link with.  Building from
+source.
 
 
 ### Add Racket submodule
@@ -42,3 +43,15 @@ Ok now this works...
 ```
 $ make cs-in-place RACKET=$(which racket)
 ```
+
+### Now write a bunch of code.
+
+```
+$ cp racket/racket/lib/*.boot test-project/gdracket/
+```
+
+`libracketcs.a` doesn't want to link into the shared library we need for Godot.
+May have to rebuild racket with `-fPIC`?
+
+
+

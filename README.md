@@ -13,3 +13,32 @@ $HOME/racket-godot/racketcs-7.7
 $ ./racketcs-7.7/bin/raco pkg install -i --auto cext-lib
 
  ```
+
+OK minimal install is missing the library file to link with.  Building from source.
+
+
+### Add Racket submodule
+```
+$ git submodule add git@github.com:racket/racket.git
+$ cd racket
+$ git checkout v7.7
+$ git add racket
+```
+
+
+### Build Racket CS
+```
+$ make cs-in-place RACKET=$(which racket)
+```
+
+Missing uuid.h file :(
+
+```
+$ sudo apt-get install uuid-dev
+```
+
+Ok now this works...
+
+```
+$ make cs-in-place RACKET=$(which racket)
+```

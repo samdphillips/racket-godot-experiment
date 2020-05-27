@@ -1,8 +1,9 @@
 [submodule "godot_headers"]
 	path = godot_headers
 	url = git@github.com:GodotNativeTools/godot_headers.git
-	branch = 3.2
 [submodule "racket"]
 	path = racket
 	url = git@github.com:racket/racket.git
-	branch = v7.7
+[submodule "chezscheme"]
+	path = chezscheme
+	url = git@github.com:racket/ChezScheme.git

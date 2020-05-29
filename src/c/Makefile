@@ -1,9 +1,8 @@
 
-CFLAGS = -Wall -fPIC -I../../godot_headers -I../../racket/racket/include
+CFLAGS = -Wall -fPIC -I../../godot_headers -I../../../racket-7.7/include
 
-gdracket.so: racket_init.o ../../racket/racket/lib/libracketcs.a
-	# $(CC) -shared -o $@ racket_init.o -Wl,--whole-archive ../../racket/racket/lib/libracketcs.a -Wl,--no-whole-archive
-	$(CC) -shared -o $@ $^
+gdracket.so: racket_init.o ../../../racket-7.7/lib/libracketcs.a
+	$(CC) -shared -o $@ $^ -Wl,--as-needed -luuid
 
 install: gdracket.so
 	cp gdracket.so ../../test-project/gdracket/

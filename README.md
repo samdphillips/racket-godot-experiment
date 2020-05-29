@@ -54,4 +54,13 @@ $ cp racket/racket/lib/*.boot test-project/gdracket/
 May have to rebuild racket with `-fPIC`?
 
 
+```
+$ mkdir build
+$ cd build/
+$ CFLAGS="-fPIC" ../configure --enable-cs
+$ make cs
+$ make install-cs
+ ```
+
+ Hooray it builds!
 

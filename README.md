@@ -12,8 +12,6 @@ Only tested on Linux.
 You need to download:
 - https://mirror.racket-lang.org/installers/8.0/racket-8.0-src-builtpkgs.tgz
 - https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_x11.64.zip
-- `godot_headers` - there is a repo for this in the Godot Github, you'll want a
-  version compatible with the  version of Godot downloaded.
 
 ## Install in place install Racket in racket-8.0
 

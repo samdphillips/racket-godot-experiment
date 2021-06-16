@@ -38,5 +38,6 @@
 (define (gdracket-init init-opts)
   (displayln init-opts))
 
+(display (banner))
 (displayln "gdracket module loaded")
 
